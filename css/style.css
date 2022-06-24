@@ -57,6 +57,31 @@ img {
 
 strong { font-weight: var(--fw-bold) }
 
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+/* buttons */
+
+.btn {
+    display: inline-block;
+    padding: .5em 1.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.1)
+}
+
 /* Typography */
 
 h1,
@@ -111,8 +136,8 @@ nav { display: none; }
     box-shadow: var(--bs);
 }
 
-.section__subtitle--intro{
-    display: inline-block
+.section__subtitle--intro {
+    display: inline-block;
 }
 
 @media (min-width: 600px) {
@@ -146,7 +171,8 @@ nav { display: none; }
 }
 
 
-/* my services section */
+
+/*  My services section  */
 
 .my-services {
     background-color: var(--clr-dark);
@@ -157,27 +183,34 @@ nav { display: none; }
     text-align: center;
 }
 
-
-.section__title--services{
+.section__title--services {
     color: var(--clr-accent);
     position: relative;
 }
 
-.section__title--services::after{
-    content: "";
+.section__title--services::after {
+    content: '';
     display: block;
     width: 2em;
     height: 1px;
     margin: 0.5em auto 1em;
     background: var(--clr-light);
-    opacity: 0.25
+    opacity: 0.25;
 }
 
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
 
-@media (min-width: 800px){
+@media (min-width: 800px) {
     .services {
         display: flex;
         max-width: 1000px;
         margin: 0 auto;
+    }
+
+    .service + .service {
+        margin-left: 2em;
     }
 }
